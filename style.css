@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+*{
+  margin: 0;  
+  box-sizing: border-box; 
+  padding: 0;
+}
+
+body{
+  min-height: 100vh;
+  font-size: 1rem;
+  font-family:"Red Hat Display", sans-serif;
+  background: url(images/pattern-background-desktop.svg);
+  background-color: hsl(225, 100%, 94%);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  justify-content: center; 
+}
+
+
+.container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.image{
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px 20px 0 0;
+}
+
+/* ORDER SUMMARY SECTION */
+
+.white-card{
+  text-align: center;
+  background-color: #fff;
+  border-bottom-left-radius:20px;
+  border-bottom-right-radius:20px;
+  box-shadow: 0px 20px 25px -15px hsl(229, 21%, 65%)
+}
+
+.title{
+  margin-top: 1.5rem;
+  color: hsl(223, 47%, 23%);
+  font-weight: 900;
+  font-size: 1.5rem;
+
+}
+
+.text{
+  color: hsl(224, 23%, 55%);
+  text-align: center;
+  padding: 1.5rem 2rem 3rem 2rem;  
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+
+/* ANNUAL PLAN SECTION */
+
+.plan-box{
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 2rem;
+  
+}
+
+.price-icon{
+  padding-left: 2rem;
+}
+
+.plan-details{
+padding-right: 3em;
+padding-left: 1rem;
+display: flex;
+justify-content: center;
+flex-direction: column;
+gap: 0.2rem; 
+}
+
+.change-link{
+padding-right: 2rem; 
+font-weight: 900;
+font-size: .9rem;
+display: flex;
+align-items: center;
+} 
+
+.change-link:hover{
+  opacity: 0.73;
+}
+
+.details-heading{
+  color: hsl(223, 47%, 23%);
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.details-price{
+  color: hsl(224, 23%, 55%);
+}
+
+/* BUTTONS */
+
+.buttons{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1.5rem;  
+}
+
+.payment-btn{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem 0;
+  background-color: hsl(245, 75%, 52%);
+  color:#fff;
+  font-family:"Red Hat Display", sans-serif;
+  font-weight: 900;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px; 
+  box-shadow: 0px 20px 20px -5px hsl(224, 42%, 76%);
+}
+
+
+.payment-btn:hover {
+  cursor:pointer;
+}
+
+.payment-btn:hover {
+   opacity:0.73;}
+
+.cancel-btn{
+  text-decoration: none;
+  color:hsl(224, 23%, 55%) ;
+  font-weight: 900;
+  margin-bottom: 2rem;
+  }
+
+.cancel-btn:hover{
+  color: hsl(223, 47%, 23%);
+  }
+
+
+                          /* MEDIA QUERIES  */
+
+
+ /* Media Queries : MIN-WIDTH 540PX  */
+
+  @media(min-width: 540px) {
+
+    .body{
+      background: url(images/pattern-background-desktop.svg);
+    }
+    .container{
+      align-items: center;
+      max-width: 450px;
+    }
+
+    .title{
+      font-size: 1.2rem;
+    }
+
+    .text {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    } 
+
+    .change-link,
+    .details-price{
+      font-size: 0.8rem;
+    }
+    
+    .payment-btn,
+    .cancel-btn,
+    .details-heading{
+      font-size:0.9rem;
+    }
+
+
+  }
+
+  /* Media Queries : MAX-WIDTH 280PX  */
+
+  @media(max-width: 280px) {
+
+    .title{
+      font-size: 1.2rem;
+    }
+
+    .text{
+      font-size: 0.8rem;
+      padding: 1.5rem 1rem 2rem 1rem;
+    }
+  
+    .price-icon{
+      padding-left: 0;
+
+    }
+    .change-link{
+     padding-right: 0;
+    }
+
+    .plan-details{
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .payment-btn,
+    .cancel-btn,
+    .plan-details
+    .details-price,
+    .details-heading,
+    .change-link{
+      font-size: 0.7rem;
+    }
+  }
